@@ -1,13 +1,19 @@
 ## 📈 About
+
 `multireflects` is a Python library designed for generating multi-band reflection-dominated light curves, with computational acceleration implemented in C. It can be integrated with MCMC sampling libraries, such as `emcee`, to explore the orbital parameters of binary systems dominated by reflection effects.
 
 The main advantages of `multireflects` are:
+
 (1) A single execution can simultaneously produce light curves in multiple passbands.
+
 (2) For the same input parameters, its runtime performance (excluding initialization time) is at least one order of magnitude faster than commonly used reflection light-curve generators such as `phoebe`, and on average about two orders of magnitude faster.
+
 (3) The stellar surface is divided into a fine mesh (over 10,000 surface elements), resulting in smooth light curves.
 
 The main limitations are:
+
 (1) The use of ellipsoidal approximations and relatively coarse surface gravity interpolation can introduce significant errors when modeling ellipsoidal-variation-dominated light curves, particularly in regions where gravity darkening is strong.
+
 (2) Users must properly configure a C compiler and possess some basic knowledge of compilation to successfully install and use the library.
 
 ## 🚀 Installation
